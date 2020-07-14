@@ -11,9 +11,7 @@
 
 #tweet-text {
     display: flex;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+    border-style: hidden;
     border-bottom: 5px solid #545149;
     background-color: #f4f1ec;
     width: 100%;
