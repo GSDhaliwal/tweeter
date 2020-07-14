@@ -21,7 +21,13 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+   display: flex;
+   flex-direction: column;
+   padding-left: 5%;
+   padding-right: 5%;
+ }
