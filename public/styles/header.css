@@ -1,0 +1,11 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #d2962a;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
