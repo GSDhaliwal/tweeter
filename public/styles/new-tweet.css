@@ -1,0 +1,36 @@
+.message-composer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+#compose-message-label {
+  display: flex;
+  font-weight: 700;
+}
+
+#tweet-text {
+    display: flex;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #545149;
+    background-color: #f4f1ec;
+    width: 100%;
+    outline: none;
+    resize: none;
+}
+
+.button-and-counter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Bungee', sans-serif;
+}
+
+.button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-size: large;
+}
