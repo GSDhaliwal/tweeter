@@ -4,7 +4,7 @@ $(document).ready(function() {
       if (140 - $(this).val().length < 0) {
         $("output").css("color", "red");
       } else {
-        $("output").css("color", "#545149");
+        $("output").css("color", "#000000");
       }
   });
 });

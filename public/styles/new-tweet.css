@@ -12,8 +12,8 @@
 #tweet-text {
     display: flex;
     border-style: hidden;
-    border-bottom: 5px solid #545149;
-    background-color: #f4f1ec;
+    border-bottom: 5px solid #ab2323;
+    background-color: #d1c5c5;
     width: 100%;
     outline: none;
     resize: none;
@@ -28,7 +28,11 @@
 }
 
 .button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #000000;
+  color: #ab2323;
   font-size: large;
+}
+
+.counter {
+  color: #000000;
 }
