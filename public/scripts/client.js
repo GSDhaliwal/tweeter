@@ -31,14 +31,13 @@ $(document).ready(function() {
     }
   ]
 
-const renderTweets = function(tweets) {
-  for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet); 
+  const renderTweets = function(tweets) {
+    for (let tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').append($tweet); 
+    }
   }
-}
  
-  
   const createTweetElement = function(userData) {
     const stringifiedTweet = 
       `<article class="tweets">
@@ -62,7 +61,20 @@ const renderTweets = function(tweets) {
     return $(stringifiedTweet);
   }
 
- 
   renderTweets(data);
+
+  $('#form').submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: '/tweets/',
+      method: "POST", 
+      data: $(this).serialize()
+    })
+    .then(function(res) {
+      console.log('Success: ', res);
+    })
+})
+ 
+  
 
 });
