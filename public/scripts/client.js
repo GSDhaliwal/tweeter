@@ -9,18 +9,18 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweet); 
+      $('#tweets-container').prepend($tweet);
     }
-  }
+  };
 
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   const createTweetElement = function(userData) {
-    const stringifiedTweet = 
+    const stringifiedTweet =
       `<article class="tweets">
         <header class="user-info">
           <div class="user-name-avatar">
@@ -37,10 +37,25 @@ $(document).ready(function() {
             <p class="date-images" id="icons">icons</p>
           </div>
         </footer>
-      </article>`
+      </article>`;
 
     return $(stringifiedTweet);
-  }
+  };
+
+  const loadTweets = function() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+    })
+    .then(function(res) {
+      $('#tweets-container').empty();
+      renderTweets(res);
+    })
+    $('#tweet-text').val('');
+    $('.counter').val(140);
+  };
+
+  loadTweets();
 
   $("#form").submit(function(event) {
     
@@ -57,27 +72,16 @@ $(document).ready(function() {
       $("#over-140").slideUp(1000);
       $.ajax({
         url: '/tweets/',
-        method: 'POST', 
+        method: 'POST',
         data: $(this).serialize()
       })
       .then(function(res) {
         loadTweets(res);
       })
-    }
+    };
    
-  })
+  });
 
-  const loadTweets = function() {
-    $.ajax({
-      url: '/tweets', 
-      method: 'GET',
-    })
-    .then(function(res) {
-      $('#tweets-container').empty();
-      renderTweets(res);
-    })
-    $('#tweet-text').val('');
-    $('.counter').val(140);
-  }
+  
 
 });

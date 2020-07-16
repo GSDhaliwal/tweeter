@@ -1,7 +1,8 @@
 nav {
   height: 120px;
-  background-color: #000000;
-  color: #ab2323;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   padding: 1.5em;
   display: flex;
   justify-content: space-between;
@@ -18,4 +19,12 @@ nav {
 span {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: large;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  nav {
+    background-color: #d2962a;
+  }
+
 }

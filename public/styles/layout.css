@@ -15,8 +15,8 @@ html {
  */
 
 body {
-  color: #000000;
-  background-color: #d1c5c5;
+  color: #545149;
+  background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -30,4 +30,26 @@ body {
    flex-direction: column;
    padding-left: 5%;
    padding-right: 5%;
+ }
+
+
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .main-header {
+    max-width: 30%;
+  }
+
+  .container {
+    max-width: 70%;
+    width: 70%;
+    padding-top: 120px;
+  }
+
  }

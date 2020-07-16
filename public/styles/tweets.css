@@ -1,12 +1,12 @@
 .tweets {
-  border: 5px solid #ab2323;
+  border: 5px solid #545149;
   padding: 2%;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .tweets:hover {
-  box-shadow: 9px 8px 3px 4px #6f4242;
+  box-shadow: 9px 8px 3px 4px #7A735e;
 }
 
 .tweets:hover .user-name-avatar {
@@ -23,7 +23,7 @@
 
 .tweets:hover .user-handle {
   visibility: visible;
-  color: #6f4242;
+  color: #887f55;
 }
 
 .user-info {
@@ -52,7 +52,7 @@
 
 .tweets-body {
   display: flex;
-  border-bottom: 5px solid #ab2323;
+  border-bottom: 5px solid #545149;
   padding-bottom: 20px;
   font-weight: 300;
   margin-bottom: 0;
