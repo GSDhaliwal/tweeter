@@ -12,7 +12,13 @@ $(document).ready(function() {
       $('#tweets-container').prepend($tweet); 
     }
   }
- 
+  
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const createTweetElement = function(userData) {
     const stringifiedTweet = 
       `<article class="tweets">
@@ -25,7 +31,7 @@ $(document).ready(function() {
             <p>${userData.user.handle}</p>
           </div>
         </header>
-          <p class="tweets-body">${userData.content.text}</p>
+          <p class="tweets-body">${escape(userData.content.text)}</p>
         <footer class="footer-info">
             <p class="date-images" id="date">${userData.created_at}</p>
             <p class="date-images" id="icons">icons</p>
