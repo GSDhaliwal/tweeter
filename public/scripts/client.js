@@ -9,7 +9,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet); 
+      $('#tweets-container').prepend($tweet); 
     }
   }
  
@@ -53,6 +53,8 @@ $(document).ready(function() {
         loadTweets(res);
       })
     }
+    $('#tweet-text').val('');
+    $('.counter').val(140);
   })
 
   const loadTweets = function() {
