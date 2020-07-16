@@ -10,13 +10,27 @@
 }
 
 #tweet-text {
-    display: flex;
-    border-style: hidden;
-    border-bottom: 5px solid #ab2323;
-    background-color: #d1c5c5;
-    width: 100%;
-    outline: none;
-    resize: none;
+  display: flex;
+  border-style: hidden;
+  border-bottom: 5px solid #ab2323;
+  background-color: #d1c5c5;
+  width: 100%;
+  outline: none;
+  resize: none;
+}
+
+#over-140 {
+  display: none;
+  padding: 15px;
+  border: 5px solid #ff0000;
+  color: #ff0000;
+}
+
+#empty-text {
+  display: none;
+  padding: 15px;
+  border: 5px solid #ff0000;
+  color: #ff0000;
 }
 
 .button-and-counter {
