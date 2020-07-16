@@ -38,15 +38,21 @@ $(document).ready(function() {
 
   $('#form').submit(function(event) {
     event.preventDefault();
-    $.ajax({
-      url: '/tweets/',
-      method: 'POST', 
-      data: $(this).serialize()
-    })
-    .then(function(res) {
-      console.log('Success: ', res);
-      loadTweets(res);
-    })
+    if ($("textarea").val().length === 0) {
+      alert("Content is empty");
+    } else if ($("textarea").val().length > 140) {
+      alert("Slow Down, you've hit the cap");
+    } else {
+      $.ajax({
+        url: '/tweets/',
+        method: 'POST', 
+        data: $(this).serialize()
+      })
+      .then(function(res) {
+        console.log('Success: ', res);
+        loadTweets(res);
+      })
+    }
   })
 
   const loadTweets = function() {
