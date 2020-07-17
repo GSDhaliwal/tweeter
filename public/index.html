@@ -25,11 +25,15 @@
     <!-- Tweets -->
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
+    <script src="https://kit.fontawesome.com/33416c1218.js" crossorigin="anonymous"></script>
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/moment.js"></script>
+
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
@@ -53,10 +57,10 @@
     <main class="container">
       <section class="new-tweet">
         <div>
-          <p id="over-140">Hold up!!! Don't you see the red numbers???? That means you are over the limit. Back up and try again.</p>
+          <p id="over-140">You've surpassed the character limit of 140.</p>
         </div>
         <div>
-          <p  id="empty-text">What are you doing??? The text box is still empty. Write something before you post.</p>
+          <p id="empty-text">Empty text box.</p>
         </div>
         <form id="form">
           <div class="message-composer">
