@@ -4,7 +4,10 @@ A Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on the client-
 
 ## Final Product
 
+Desktop View(1024px Width and greater)
 !["Desktop View"](https://github.com/GSDhaliwal/tweeter/blob/master/docs/tweet-desktop-view.png)
+
+Tablet/Cell View(1023px Width and lower)
 !["Tablet/Cell View"](https://github.com/GSDhaliwal/tweeter/blob/master/docs/tweet-tablet-view.png)
 
 ## Dependencies
